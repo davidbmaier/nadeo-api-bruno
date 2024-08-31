@@ -1,0 +1,15 @@
+meta {
+  name: Get routes
+  type: http
+  seq: 3
+}
+
+get {
+  url: https://prod.trackmania.core.nadeo.online/api/routes
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: nadeo_v1 t={{coreToken}}
+}

@@ -1,0 +1,24 @@
+meta {
+  name: Get surrounding records
+  type: http
+  seq: 34
+}
+
+get {
+  url: https://live-services.trackmania.nadeo.live/api/token/leaderboard/group/:groupId/map/:mapUid/surround/1/1?score=50000
+  body: none
+  auth: none
+}
+
+params:query {
+  score: 50000
+}
+
+params:path {
+  mapUid: vcDxzIGUJcJfoPz8KTCwT8Awj_f
+  groupId: Personal_Best
+}
+
+headers {
+  Authorization: nadeo_v1 t={{liveToken}}
+}

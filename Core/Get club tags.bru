@@ -1,0 +1,19 @@
+meta {
+  name: Get club tags
+  type: http
+  seq: 11
+}
+
+get {
+  url: https://prod.trackmania.core.nadeo.online/accounts/clubTags/?accountIdList=51e76640-79a6-4deb-b0ed-f133907cb500
+  body: none
+  auth: none
+}
+
+params:query {
+  accountIdList: 51e76640-79a6-4deb-b0ed-f133907cb500
+}
+
+headers {
+  Authorization: nadeo_v1 t={{coreToken}}
+}

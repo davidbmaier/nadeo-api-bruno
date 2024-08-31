@@ -1,0 +1,19 @@
+meta {
+  name: Get account subscriptions
+  type: http
+  seq: 12
+}
+
+get {
+  url: https://prod.trackmania.core.nadeo.online/v2/accounts/:accountId/subscriptions/
+  body: none
+  auth: none
+}
+
+params:path {
+  accountId: 5b4d42f4-c2de-407d-b367-cbff3fe817bc
+}
+
+headers {
+  Authorization: nadeo_v1 t={{coreToken}}
+}

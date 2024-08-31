@@ -1,0 +1,15 @@
+meta {
+  name: Get maniapubs
+  type: http
+  seq: 40
+}
+
+get {
+  url: https://live-services.trackmania.nadeo.live/api/token/ads
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: nadeo_v1 t={{liveToken}}
+}

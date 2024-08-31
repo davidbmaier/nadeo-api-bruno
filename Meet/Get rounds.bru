@@ -1,0 +1,19 @@
+meta {
+  name: Get rounds
+  type: http
+  seq: 6
+}
+
+get {
+  url: https://meet.trackmania.nadeo.club/api/competitions/:compId/rounds
+  body: none
+  auth: none
+}
+
+params:path {
+  compId: 19587
+}
+
+headers {
+  Authorization: nadeo_v1 t={{liveToken}}
+}

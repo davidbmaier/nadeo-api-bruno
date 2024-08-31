@@ -1,0 +1,19 @@
+meta {
+  name: Get challenge
+  type: http
+  seq: 3
+}
+
+get {
+  url: https://meet.trackmania.nadeo.club/api/challenges/:challengeId
+  body: none
+  auth: none
+}
+
+params:path {
+  challengeId: 10861
+}
+
+headers {
+  Authorization: nadeo_v1 t={{liveToken}}
+}

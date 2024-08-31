@@ -1,0 +1,19 @@
+meta {
+  name: Get club competition
+  type: http
+  seq: 14
+}
+
+get {
+  url: https://meet.trackmania.nadeo.club/api/club-competitions/:compId
+  body: none
+  auth: none
+}
+
+params:path {
+  compId: 139313
+}
+
+headers {
+  Authorization: nadeo_v1 t={{liveToken}}
+}

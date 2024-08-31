@@ -1,0 +1,19 @@
+meta {
+  name: Get competition leaderboard
+  type: http
+  seq: 11
+}
+
+get {
+  url: https://meet.trackmania.nadeo.club/api/competitions/:compId/leaderboard
+  body: none
+  auth: none
+}
+
+params:path {
+  compId: 332
+}
+
+headers {
+  Authorization: nadeo_v1 t={{liveToken}}
+}

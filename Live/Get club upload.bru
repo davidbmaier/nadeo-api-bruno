@@ -1,0 +1,20 @@
+meta {
+  name: Get club upload
+  type: http
+  seq: 57
+}
+
+get {
+  url: https://live-services.trackmania.nadeo.live/api/token/club/:clubId/bucket/:bucketId
+  body: none
+  auth: none
+}
+
+params:path {
+  bucketId: 350477
+  clubId: 57167
+}
+
+headers {
+  Authorization: nadeo_v1 t={{liveToken}}
+}

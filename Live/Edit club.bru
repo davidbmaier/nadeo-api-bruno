@@ -1,0 +1,36 @@
+meta {
+  name: Edit club
+  type: http
+  seq: 44
+}
+
+post {
+  url: https://live-services.trackmania.nadeo.live/api/token/club/:clubId/edit
+  body: json
+  auth: none
+}
+
+params:path {
+  clubId: 1234
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: nadeo_v1 t={{liveToken}}
+}
+
+body:json {
+  {
+    "name":"test",
+    "tag":"hello",
+    "description":"test",
+    "state":"private-open",
+    "iconTheme":"",
+    "decalTheme":"",
+    "backgroundTheme":"",
+    "verticalTheme":"",
+    "screen16x9Theme":"",
+    "screen8x1Theme":"",
+    "screen16x1Theme":""
+  }
+}

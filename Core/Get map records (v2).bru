@@ -1,0 +1,21 @@
+meta {
+  name: Get map records (v2)
+  type: http
+  seq: 9
+}
+
+get {
+  url: https://prod.trackmania.core.nadeo.online/v2/mapRecords/?accountIdList=5b4d42f4-c2de-407d-b367-cbff3fe817bc&mapId=01730f90-7ffb-424d-a4a1-617f0fbff65c&gameMode=Stunt
+  body: none
+  auth: none
+}
+
+params:query {
+  accountIdList: 5b4d42f4-c2de-407d-b367-cbff3fe817bc
+  mapId: 01730f90-7ffb-424d-a4a1-617f0fbff65c
+  gameMode: Stunt
+}
+
+headers {
+  Authorization: nadeo_v1 t={{coreToken}}
+}

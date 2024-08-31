@@ -1,0 +1,19 @@
+meta {
+  name: Get map info (single)
+  type: http
+  seq: 36
+}
+
+get {
+  url: https://live-services.trackmania.nadeo.live/api/token/map/:mapUid
+  body: none
+  auth: none
+}
+
+params:path {
+  mapUid: F6B8jSu7umawah4kA5fssf8ro7d
+}
+
+headers {
+  Authorization: nadeo_v1 t={{liveToken}}
+}

@@ -1,0 +1,20 @@
+meta {
+  name: Get favorite maps
+  type: http
+  seq: 41
+}
+
+get {
+  url: https://live-services.trackmania.nadeo.live/api/token/map/favorite?offset=0&length=100
+  body: none
+  auth: none
+}
+
+params:query {
+  offset: 0
+  length: 100
+}
+
+headers {
+  Authorization: nadeo_v1 t={{liveToken}}
+}

@@ -1,0 +1,24 @@
+meta {
+  name: Get trophy history for player
+  type: http
+  seq: 6
+}
+
+get {
+  url: https://prod.trackmania.core.nadeo.online/accounts/:accountId/trophies?offset=0&count=100
+  body: none
+  auth: none
+}
+
+params:query {
+  offset: 0
+  count: 100
+}
+
+params:path {
+  accountId: 5b4d42f4-c2de-407d-b367-cbff3fe817bc
+}
+
+headers {
+  Authorization: nadeo_v1 t={{coreToken}}
+}

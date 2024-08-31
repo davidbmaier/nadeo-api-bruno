@@ -1,0 +1,29 @@
+meta {
+  name: Get Ubi ticket (user)
+  type: http
+  seq: 5
+}
+
+post {
+  url: https://public-ubiservices.ubi.com/v3/profiles/sessions
+  body: none
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+  Ubi-AppId: 86263886-327a-4328-ac69-527f0d20a237
+}
+
+auth:basic {
+  username: {{process.env.UBI_USER}}
+  password: {{process.env.UBI_PASSWORD}}
+}
+
+script:post-response {
+  let data = res.getBody();
+  if (data.ticket) {
+    bru.setEnvVar("ubiTicket", data.ticket);
+  }
+  
+}

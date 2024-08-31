@@ -1,0 +1,15 @@
+meta {
+  name: Get routes (UAT)
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://uat.trackmania-next-dev.core.nadeo.online/api/routes
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: nadeo_v1 t={{coreToken}}
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Get map info
+  type: http
+  seq: 5
+}
+
+get {
+  url: https://prod.trackmania.core.nadeo.online/maps/?mapUidList=nbxqt0PC0aQp32oG68s_ACM2qRd
+  body: none
+  auth: none
+}
+
+params:query {
+  mapUidList: nbxqt0PC0aQp32oG68s_ACM2qRd
+}
+
+headers {
+  Authorization: nadeo_v1 t={{coreToken}}
+}

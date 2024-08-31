@@ -1,0 +1,20 @@
+meta {
+  name: Get club room
+  type: http
+  seq: 53
+}
+
+get {
+  url: https://live-services.trackmania.nadeo.live/api/token/club/:clubId/room/:roomId
+  body: none
+  auth: none
+}
+
+params:path {
+  roomId: 381929
+  clubId: 25
+}
+
+headers {
+  Authorization: nadeo_v1 t={{liveToken}}
+}

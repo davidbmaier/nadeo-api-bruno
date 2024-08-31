@@ -1,0 +1,20 @@
+meta {
+  name: Get challenge records for map
+  type: http
+  seq: 4
+}
+
+get {
+  url: https://meet.trackmania.nadeo.club/api/challenges/:challengeId/records/maps/:mapUid
+  body: none
+  auth: none
+}
+
+params:path {
+  mapUid: An5OXk5Bd9CtecZcqvTBMRoEPm6
+  challengeId: 9980
+}
+
+headers {
+  Authorization: nadeo_v1 t={{liveToken}}
+}

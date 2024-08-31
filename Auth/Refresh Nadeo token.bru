@@ -1,0 +1,19 @@
+meta {
+  name: Refresh Nadeo token
+  type: http
+  seq: 8
+}
+
+post {
+  url: https://prod.trackmania.core.nadeo.online/v2/authentication/token/refresh
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: nadeo_v1 t={{refreshToken}}
+}
+
+vars:pre-request {
+  refreshToken: 
+}

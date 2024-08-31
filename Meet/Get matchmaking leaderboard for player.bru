@@ -1,0 +1,23 @@
+meta {
+  name: Get matchmaking leaderboard for player
+  type: http
+  seq: 13
+}
+
+get {
+  url: https://meet.trackmania.nadeo.club/api/matchmaking/:mmType/leaderboard/players?players[]=f97c374d-05c6-4b2e-93b7-7b093c439838
+  body: none
+  auth: none
+}
+
+params:query {
+  players[]: f97c374d-05c6-4b2e-93b7-7b093c439838
+}
+
+params:path {
+  mmType: 3
+}
+
+headers {
+  Authorization: nadeo_v1 t={{liveToken}}
+}

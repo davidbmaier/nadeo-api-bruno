@@ -1,0 +1,20 @@
+meta {
+  name: Get club campaign
+  type: http
+  seq: 48
+}
+
+get {
+  url: https://live-services.trackmania.nadeo.live/api/token/club/:clubId/campaign/:campaignId
+  body: none
+  auth: none
+}
+
+params:path {
+  campaignId: 28446
+  clubId: 19489
+}
+
+headers {
+  Authorization: nadeo_v1 t={{liveToken}}
+}

@@ -1,0 +1,40 @@
+meta {
+  name: Get Nadeo token (user)
+  type: http
+  seq: 6
+}
+
+post {
+  url: https://prod.trackmania.core.nadeo.online/v2/authentication/token/ubiservices
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: ubi_v1 t={{ubiTicket}}
+}
+
+body:json {
+  {"audience": "{{audience}}"}
+}
+
+vars:pre-request {
+  audience: NadeoLiveServices
+}
+
+script:post-response {
+  let data = res.getBody();
+  if (data.accessToken) {
+    switch (req.body.audience) {
+      case "NadeoLiveServices":
+      case "NadeoClubServices":
+        bru.setEnvVar("liveToken", data.accessToken);
+        bru.setEnvVar("liveRefreshToken", data.refreshToken);
+        break;
+      default:
+        bru.setEnvVar("coreToken", data.accessToken);
+        bru.setEnvVar("coreRefreshToken", data.refreshToken);
+    }
+  }
+}

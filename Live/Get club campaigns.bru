@@ -1,0 +1,21 @@
+meta {
+  name: Get club campaigns
+  type: http
+  seq: 47
+}
+
+get {
+  url: https://live-services.trackmania.nadeo.live/api/token/club/campaign?length=250&offset=0&name=training
+  body: none
+  auth: none
+}
+
+params:query {
+  length: 250
+  offset: 0
+  name: training
+}
+
+headers {
+  Authorization: nadeo_v1 t={{liveToken}}
+}

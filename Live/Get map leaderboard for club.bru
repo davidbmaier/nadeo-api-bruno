@@ -1,0 +1,25 @@
+meta {
+  name: Get map leaderboard for club
+  type: http
+  seq: 32
+}
+
+get {
+  url: https://live-services.trackmania.nadeo.live/api/token/leaderboard/group/:groupId/map/:mapUid/club/9/top?offset=500&length=100
+  body: none
+  auth: none
+}
+
+params:query {
+  offset: 500
+  length: 100
+}
+
+params:path {
+  groupId: Personal_Best
+  mapUid: yQ4ktCXu3SAxyRx9gar8hj7kVBb
+}
+
+headers {
+  Authorization: nadeo_v1 t={{liveToken}}
+}

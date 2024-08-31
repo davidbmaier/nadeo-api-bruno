@@ -1,0 +1,44 @@
+meta {
+  name: Get Nadeo token (dedi)
+  type: http
+  seq: 7
+}
+
+post {
+  url: https://prod.trackmania.core.nadeo.online/v2/authentication/token/basic
+  body: json
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{process.env.DEDI_USER}}
+  password: {{process.env.DEDI_PASSWORD}}
+}
+
+body:json {
+  {"audience": "{{audience}}"}
+}
+
+vars:pre-request {
+  audience: NadeoLiveServices
+}
+
+script:post-response {
+  let data = res.getBody();
+  if (data.accessToken) {
+    switch (req.body.audience) {
+      case "NadeoLiveServices":
+      case "NadeoClubServices":
+        bru.setEnvVar("liveToken", data.accessToken);
+        bru.setEnvVar("liveRefreshToken", data.refreshToken);
+        break;
+      default:
+        bru.setEnvVar("coreToken", data.accessToken);
+        bru.setEnvVar("coreRefreshToken", data.refreshToken);
+    }
+  }
+}

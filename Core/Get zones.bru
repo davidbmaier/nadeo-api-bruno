@@ -1,0 +1,15 @@
+meta {
+  name: Get zones
+  type: http
+  seq: 13
+}
+
+get {
+  url: https://prod.trackmania.core.nadeo.online/zones/
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: nadeo_v1 t={{coreToken}}
+}

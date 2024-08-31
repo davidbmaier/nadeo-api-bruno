@@ -1,0 +1,25 @@
+meta {
+  name: Get campaign leaderboard
+  type: http
+  seq: 33
+}
+
+get {
+  url: https://live-services.trackmania.nadeo.live/api/token/leaderboard/group/:groupId/top?onlyWorld=true&offset=0&length=10
+  body: none
+  auth: none
+}
+
+params:query {
+  onlyWorld: true
+  offset: 0
+  length: 10
+}
+
+params:path {
+  groupId: b44807b9-9284-4730-a184-281069f45b60
+}
+
+headers {
+  Authorization: nadeo_v1 t={{liveToken}}
+}

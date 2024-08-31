@@ -1,0 +1,23 @@
+meta {
+  name: Get competition match results
+  type: http
+  seq: 10
+}
+
+get {
+  url: https://meet.trackmania.nadeo.club/api/matches/:matchId/results?length=64
+  body: none
+  auth: none
+}
+
+params:query {
+  length: 64
+}
+
+params:path {
+  matchId: 80382
+}
+
+headers {
+  Authorization: nadeo_v1 t={{liveToken}}
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Get routes (CERT)
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://cert.trackmania-next-dev.core.nadeo.online/api/routes
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: nadeo_v1 t={{coreToken}}
+}

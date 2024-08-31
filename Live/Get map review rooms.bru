@@ -1,0 +1,20 @@
+meta {
+  name: Get map review rooms
+  type: http
+  seq: 51
+}
+
+get {
+  url: https://live-services.trackmania.nadeo.live/api/token/club/map-review?length=250&offset=0
+  body: none
+  auth: none
+}
+
+params:query {
+  length: 250
+  offset: 0
+}
+
+headers {
+  Authorization: nadeo_v1 t={{liveToken}}
+}

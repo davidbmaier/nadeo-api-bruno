@@ -1,0 +1,26 @@
+meta {
+  name: Get map leaderboard
+  type: http
+  seq: 31
+}
+
+get {
+  url: https://live-services.trackmania.nadeo.live/api/token/leaderboard/group/:groupId/map/:mapUid/top?onlyWorld=true&length=100&offset=0
+  body: none
+  auth: none
+}
+
+params:query {
+  onlyWorld: true
+  length: 100
+  offset: 0
+}
+
+params:path {
+  groupId: Personal_Best
+  mapUid: I6Bye2PE54R0KVwolTCpNrkHUP7
+}
+
+headers {
+  Authorization: nadeo_v1 t={{liveToken}}
+}

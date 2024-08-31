@@ -1,0 +1,23 @@
+meta {
+  name: Get all records for account
+  type: http
+  seq: 10
+}
+
+get {
+  url: https://prod.trackmania.core.nadeo.online/v2/accounts/:accountId/mapRecords?gameMode=Stunt
+  body: none
+  auth: none
+}
+
+params:query {
+  gameMode: Stunt
+}
+
+params:path {
+  accountId: 5b4d42f4-c2de-407d-b367-cbff3fe817bc
+}
+
+headers {
+  Authorization: nadeo_v1 t={{coreToken}}
+}

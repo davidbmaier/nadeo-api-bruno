@@ -1,0 +1,24 @@
+meta {
+  name: Get club members
+  type: http
+  seq: 46
+}
+
+get {
+  url: https://live-services.trackmania.nadeo.live/api/token/club/:clubId/member?length=250&offset=0
+  body: none
+  auth: none
+}
+
+params:query {
+  length: 250
+  offset: 0
+}
+
+params:path {
+  clubId: 9
+}
+
+headers {
+  Authorization: nadeo_v1 t={{liveToken}}
+}

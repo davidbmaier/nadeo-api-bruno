@@ -1,0 +1,20 @@
+meta {
+  name: Get club item-uploads
+  type: http
+  seq: 54
+}
+
+get {
+  url: https://live-services.trackmania.nadeo.live/api/token/club/bucket/item-upload/all?length=250&offset=0
+  body: none
+  auth: none
+}
+
+params:query {
+  length: 250
+  offset: 0
+}
+
+headers {
+  Authorization: nadeo_v1 t={{liveToken}}
+}

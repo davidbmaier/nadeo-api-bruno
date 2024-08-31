@@ -1,0 +1,25 @@
+meta {
+  name: Set account zone
+  type: http
+  seq: 14
+}
+
+put {
+  url: https://prod.trackmania.core.nadeo.online/accounts/:accountId/zone
+  body: json
+  auth: none
+}
+
+params:path {
+  accountId: 5b4d42f4-c2de-407d-b367-cbff3fe817bc
+}
+
+headers {
+  Authorization: nadeo_v1 t={{coreToken}}
+}
+
+body:json {
+  {
+    "zoneId": "301ff90f-7e13-11e8-8060-e284abfd2bc4"
+  }
+}

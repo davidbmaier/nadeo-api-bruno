@@ -1,0 +1,19 @@
+meta {
+  name: Get map info (multi)
+  type: http
+  seq: 37
+}
+
+get {
+  url: https://live-services.trackmania.nadeo.live/api/token/map/get-multiple?mapUidList=2zby5aTOALJQbJDCajKX1hwEA34
+  body: none
+  auth: none
+}
+
+params:query {
+  mapUidList: 2zby5aTOALJQbJDCajKX1hwEA34
+}
+
+headers {
+  Authorization: nadeo_v1 t={{liveToken}}
+}

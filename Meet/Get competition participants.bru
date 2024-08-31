@@ -1,0 +1,23 @@
+meta {
+  name: Get competition participants
+  type: http
+  seq: 12
+}
+
+get {
+  url: https://meet.trackmania.nadeo.club/api/competitions/:compId/participants?length=5
+  body: none
+  auth: none
+}
+
+params:query {
+  length: 5
+}
+
+params:path {
+  compId: 332
+}
+
+headers {
+  Authorization: nadeo_v1 t={{liveToken}}
+}

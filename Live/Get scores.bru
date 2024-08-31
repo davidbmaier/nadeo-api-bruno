@@ -1,0 +1,31 @@
+meta {
+  name: Get scores
+  type: http
+  seq: 35
+}
+
+post {
+  url: https://live-services.trackmania.nadeo.live/api/token/leaderboard/group/map?scores[k4TKkf1JSlWTEEZdCc9UCNTokk6]=30000
+  body: json
+  auth: none
+}
+
+params:query {
+  scores[k4TKkf1JSlWTEEZdCc9UCNTokk6]: 30000
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: nadeo_v1 t={{liveToken}}
+}
+
+body:json {
+  {
+    "maps": [
+      {
+        "mapUid": "k4TKkf1JSlWTEEZdCc9UCNTokk6",
+        "groupUid": "Personal_Best"
+      }
+    ]
+  }
+}

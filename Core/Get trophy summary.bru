@@ -1,0 +1,23 @@
+meta {
+  name: Get trophy summary
+  type: http
+  seq: 7
+}
+
+get {
+  url: https://prod.trackmania.core.nadeo.online/accounts/:accountId/trophies/lastYearSummary?gameMode=Stunt
+  body: none
+  auth: none
+}
+
+params:query {
+  gameMode: Stunt
+}
+
+params:path {
+  accountId: 5b4d42f4-c2de-407d-b367-cbff3fe817bc
+}
+
+headers {
+  Authorization: nadeo_v1 t={{coreToken}}
+}

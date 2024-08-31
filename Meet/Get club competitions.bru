@@ -1,0 +1,20 @@
+meta {
+  name: Get club competitions
+  type: http
+  seq: 15
+}
+
+get {
+  url: https://meet.trackmania.nadeo.club/api/me/club-competitions?length=1&offset=3
+  body: none
+  auth: none
+}
+
+params:query {
+  length: 1
+  offset: 3
+}
+
+headers {
+  Authorization: nadeo_v1 t={{liveToken}}
+}

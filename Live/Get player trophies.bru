@@ -1,0 +1,26 @@
+meta {
+  name: Get player trophies
+  type: http
+  seq: 58
+}
+
+post {
+  url: https://live-services.trackmania.nadeo.live/api/token/leaderboard/trophy/player
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: nadeo_v1 t={{liveToken}}
+}
+
+body:json {
+  {
+    "listPlayer": [
+      {
+        "accountId": "cabdb87b-12cb-491d-8034-12bc7bc901f9"
+      }
+    ]
+  }
+}

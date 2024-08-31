@@ -1,0 +1,19 @@
+meta {
+  name: Get webidentities
+  type: http
+  seq: 4
+}
+
+get {
+  url: https://prod.trackmania.core.nadeo.online/webidentities/?accountIdList=5b4d42f4-c2de-407d-b367-cbff3fe817bc
+  body: none
+  auth: none
+}
+
+params:query {
+  accountIdList: 5b4d42f4-c2de-407d-b367-cbff3fe817bc
+}
+
+headers {
+  Authorization: nadeo_v1 t={{coreToken}}
+}

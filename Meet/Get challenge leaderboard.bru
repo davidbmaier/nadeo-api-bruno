@@ -1,0 +1,24 @@
+meta {
+  name: Get challenge leaderboard
+  type: http
+  seq: 5
+}
+
+get {
+  url: https://meet.trackmania.nadeo.club/api/challenges/:challengeId/leaderboard?length=10&offset=0
+  body: none
+  auth: none
+}
+
+params:query {
+  length: 10
+  offset: 0
+}
+
+params:path {
+  challengeId: 7956
+}
+
+headers {
+  Authorization: nadeo_v1 t={{liveToken}}
+}
