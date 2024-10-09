@@ -1,0 +1,19 @@
+meta {
+  name: Add favorite map
+  type: http
+  seq: 12
+}
+
+post {
+  url: https://live-services.trackmania.nadeo.live/api/token/map/favorite/:mapUid/add
+  body: none
+  auth: none
+}
+
+params:path {
+  mapUid: TU3hs0c0q92FLXU0tAYtqLaUjzj
+}
+
+headers {
+  Authorization: nadeo_v1 t={{liveToken}}
+}
