@@ -1,0 +1,19 @@
+meta {
+  name: Get skin
+  type: http
+  seq: 18
+}
+
+get {
+  url: https://prod.trackmania.core.nadeo.online/skins/:skinID
+  body: none
+  auth: none
+}
+
+params:path {
+  skinID: dca3a74a-acf5-4780-8842-15ba80c3b673
+}
+
+headers {
+  Authorization: nadeo_v1 t={{coreToken}}
+}

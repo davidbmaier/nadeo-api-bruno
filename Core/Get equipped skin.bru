@@ -1,0 +1,19 @@
+meta {
+  name: Get equipped skin
+  type: http
+  seq: 17
+}
+
+get {
+  url: https://prod.trackmania.core.nadeo.online/accounts/skins/?accountIdList=5b4d42f4-c2de-407d-b367-cbff3fe817bc
+  body: none
+  auth: none
+}
+
+params:query {
+  accountIdList: 5b4d42f4-c2de-407d-b367-cbff3fe817bc
+}
+
+headers {
+  Authorization: nadeo_v1 t={{coreToken}}
+}
