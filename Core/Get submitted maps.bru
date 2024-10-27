@@ -1,0 +1,15 @@
+meta {
+  name: Get submitted maps
+  type: http
+  seq: 19
+}
+
+get {
+  url: https://prod.trackmania.core.nadeo.online/maps/by-submitter
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: nadeo_v1 t={{coreToken}}
+}

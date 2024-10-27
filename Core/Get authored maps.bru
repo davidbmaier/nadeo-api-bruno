@@ -1,0 +1,15 @@
+meta {
+  name: Get authored maps
+  type: http
+  seq: 20
+}
+
+get {
+  url: https://prod.trackmania.core.nadeo.online/maps/by-author
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: nadeo_v1 t={{coreToken}}
+}
