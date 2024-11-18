@@ -1,0 +1,19 @@
+meta {
+  name: Get player zones
+  type: http
+  seq: 14
+}
+
+get {
+  url: https://prod.trackmania.core.nadeo.online/accounts/zones/?accountIdList=5b4d42f4-c2de-407d-b367-cbff3fe817bc,7398eeb6-9b4e-44b8-a7a1-a2149955ac70
+  body: none
+  auth: none
+}
+
+params:query {
+  accountIdList: 5b4d42f4-c2de-407d-b367-cbff3fe817bc,7398eeb6-9b4e-44b8-a7a1-a2149955ac70
+}
+
+headers {
+  Authorization: nadeo_v1 t={{coreToken}}
+}
