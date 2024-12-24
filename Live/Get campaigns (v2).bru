@@ -1,18 +1,18 @@
 meta {
-  name: Get clubs
+  name: Get campaigns (v2)
   type: http
-  seq: 14
+  seq: 10
 }
 
 get {
-  url: https://live-services.trackmania.nadeo.live/api/token/club?offset=0&length=250
+  url: https://live-services.trackmania.nadeo.live/api/campaign/official?offset=0&length=1
   body: none
   auth: none
 }
 
 params:query {
   offset: 0
-  length: 250
+  length: 1
 }
 
 headers {

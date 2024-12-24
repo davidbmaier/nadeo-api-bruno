@@ -1,0 +1,19 @@
+meta {
+  name: Get map record
+  type: http
+  seq: 9
+}
+
+get {
+  url: https://prod.trackmania.core.nadeo.online/mapRecords/:mapRecordId
+  body: none
+  auth: none
+}
+
+params:path {
+  mapRecordId: e8d179af-854f-4781-81b3-4ba13af82246
+}
+
+headers {
+  Authorization: nadeo_v1 t={{coreToken}}
+}

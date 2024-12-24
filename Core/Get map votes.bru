@@ -1,0 +1,19 @@
+meta {
+  name: Get map votes
+  type: http
+  seq: 17
+}
+
+get {
+  url: https://prod.trackmania.core.nadeo.online/maps/:mapUid/votes
+  body: none
+  auth: none
+}
+
+params:path {
+  mapUid: ytKTrmjtk352Ou_7IE3xHWhyj2a
+}
+
+headers {
+  Authorization: nadeo_v1 t={{coreToken}}
+}
