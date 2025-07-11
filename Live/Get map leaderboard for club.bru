@@ -5,19 +5,20 @@ meta {
 }
 
 get {
-  url: https://live-services.trackmania.nadeo.live/api/token/leaderboard/group/:groupId/map/:mapUid/club/9/top?offset=500&length=100
+  url: https://live-services.trackmania.nadeo.live/api/token/leaderboard/group/:groupId/map/:mapUid/club/:clubId/top?offset=0&length=100
   body: none
   auth: none
 }
 
 params:query {
-  offset: 500
+  offset: 0
   length: 100
 }
 
 params:path {
+  clubId: 54676
   groupId: Personal_Best
-  mapUid: yQ4ktCXu3SAxyRx9gar8hj7kVBb
+  mapUid: CMbUs4OzcDEwUcUUfOonUk4bit8
 }
 
 headers {

@@ -1,0 +1,24 @@
+meta {
+  name: Get matchmaking leaderboard
+  type: http
+  seq: 18
+}
+
+get {
+  url: https://meet.trackmania.nadeo.club/api/matchmaking/:id/leaderboard?offset=10&length=5
+  body: none
+  auth: none
+}
+
+params:query {
+  offset: 10
+  length: 5
+}
+
+params:path {
+  id: 2
+}
+
+headers {
+  Authorization: nadeo_v1 t={{liveToken}}
+}
