@@ -1,0 +1,21 @@
+meta {
+  name: Get map records by accounts (v2)
+  type: http
+  seq: 10
+}
+
+get {
+  url: https://prod.trackmania.core.nadeo.online/v2/mapRecords/by-account/?accountIdList=374d79ae-e3cf-4231-9ee3-276d414b48dd,d3557ada-6d0c-40be-9208-8587d9293dff&mapId=623730d0-6b4c-4a83-bddc-246dea88df22&gameMode=Stunt
+  body: none
+  auth: none
+}
+
+params:query {
+  accountIdList: 374d79ae-e3cf-4231-9ee3-276d414b48dd,d3557ada-6d0c-40be-9208-8587d9293dff
+  mapId: 623730d0-6b4c-4a83-bddc-246dea88df22
+  gameMode: Stunt
+}
+
+headers {
+  Authorization: nadeo_v1 t={{coreToken}}
+}

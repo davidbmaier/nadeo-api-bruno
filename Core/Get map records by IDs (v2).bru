@@ -1,0 +1,19 @@
+meta {
+  name: Get map records by IDs (v2)
+  type: http
+  seq: 11
+}
+
+get {
+  url: https://prod.trackmania.core.nadeo.online/v2/mapRecords/by-id/?mapRecordIdList=26803f78-1d8b-4382-8859-c292d0cb1d49
+  body: none
+  auth: none
+}
+
+params:query {
+  mapRecordIdList: 26803f78-1d8b-4382-8859-c292d0cb1d49
+}
+
+headers {
+  Authorization: nadeo_v1 t={{coreToken}}
+}

@@ -1,0 +1,16 @@
+meta {
+  name: Get competition matches for player
+  type: http
+  seq: 20
+}
+
+get {
+  url: https://meet.trackmania.nadeo.club/api/competitions/:competitionId/participants/:accountId/matches
+  body: none
+  auth: inherit
+}
+
+params:path {
+  accountId: 5b5e358d-b53a-4a69-9253-23fc6dc98e68
+  competitionId: 4658
+}
