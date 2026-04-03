@@ -12,7 +12,7 @@ To use it in your own installation, simply use Bruno's `Open collection` button 
 
 A couple additional hints for using this collection:
 
-- Create a `.env` file and use the template in `.env.sample` to fill it. The auth-related values will automatically be used for authentication calls. It's recommended not to use your main game account, but to create a dummy Ubisoft account for sending arbitrary API requests. Dedicated server accounts can be created [here](https://www.trackmania.com/player/dedicated-servers).
+- Create a `.env` file and use the template in `.env.sample` to fill it. The auth-related values will automatically be used for authentication calls. It's recommended not to use your main game account, but to create a dummy Ubisoft account for sending arbitrary API requests. Dedicated server accounts can be created [here](https://www.trackmania.com/player/dedicated-servers). Service accounts can be created [here](https://www.trackmania.com/player/service-account).
 - I highly recommend providing a useful user agent in the `.env` file - it will be used in every request in this collection. Make sure to include some way to contact you (e.g. Discord username, email address) so Nadeo is able to identify and reach out to you if necessary.
 - All authentication calls (apart from `Refresh Nadeo token`) have post-response scripts that save the relevant ticket/token in your Bruno environment. That way, all other calls can automatically use the correct tokens, and you don't have to copy/paste any authentication values between requests. If that's not working out of the box, make sure you have an environment selected - and make sure to allow `Developer Mode`, otherwise the scripts aren't allowed to run.
 - It should be self-explanatory that all requests you send are at your own risk - from Nadeo's perspective this is an undocumented and not officially supported set of APIs, so don't abuse them if you don't want to get banned.
@@ -21,7 +21,7 @@ If you only see some of the endpoints, check that you're on the latest Bruno ver
 
 ## Background
 
-This is a living repo that may get updated from time to time with new endpoints, parameters and random stuff. Note that this is a reflection of my local environment for testing API endpoints, so some changes may involve moving things around or very minor adjustments - I would recommend to just use it as a starting point and then make your own changes. If you're planning to do that, you may want to fork the repository so you can commit your own changes and track them over time as well.
+This is a living repo that may get updated from time to time with new endpoints, parameters and random stuff. Note that this is a loose reflection of my local environment for testing API endpoints, so some changes may involve moving things around or very minor adjustments - I would recommend to just use it as a starting point and then make your own changes. If you're planning to do that, you may want to fork the repository so you can commit your own changes and track them over time as well.
 
 Also keep in mind that this is not a standalone documentation; most endpoints don't include all possible parameters, and there's no additional explanation of what some of them do. Refer to the [community documentation](<https://webservices.openplanet.dev/>) for information about the endpoints.
 
